@@ -1,0 +1,13 @@
+.form-box {
+  max-width: 500px;
+  margin: auto;
+  padding: 50px;
+}
+
+h1, p {
+  text-align: center;
+}
+
+input, textarea {
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*.bg-color{*/
+/*  background-color: #3c3f41;*/
+/*  color: #fdf6e1;*/
+
+/*}*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400&display=swap');
+.body{
+  font-family: 'JetBrains Mono', monospace;
+  color: #a7b1bb;
+
+}

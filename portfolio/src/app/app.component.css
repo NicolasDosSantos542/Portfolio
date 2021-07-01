@@ -1,0 +1,22 @@
+
+.ide {
+height: 60vh;
+  background-color: #3a3d3f;
+}
+
+.editor {
+  padding-top: 5vh;
+  height: 60vh;
+ background-color: #2b2b2b;
+}
+
+
+.console {
+  height: 40vh;
+background-color: #272727;
+}
+.menu{
+  margin-top: 10vh;
+  margin-left: 25%;
+  list-style: none;
+}
