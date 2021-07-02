@@ -3,7 +3,6 @@
     <div class=" two columns">
       <ul class=" menu container">
         <li (click)="chooseDisplayed('home')">accueil</li>
-        <li (click)="chooseDisplayed('about')">à propos</li>
         <li (click)="chooseDisplayed('background')">parcours</li>
         <li (click)="chooseDisplayed('skills')">compétences</li>
         <li (click)="chooseDisplayed('projects')">projets</li>
@@ -13,19 +12,43 @@
 
     </div>
     <div class="editor ten columns">
-      <div class="<!--container-->">
-        <app-home *ngIf="link.isHomeActive"></app-home>
-        <app-about *ngIf="link.isAboutActive"></app-about>
-        <app-background *ngIf="link.isBackgroundActive"></app-background>
-        <app-skills *ngIf="link.isSkillActive"></app-skills>
-        <app-projects *ngIf="link.isProjectsActive"></app-projects>
-        <app-contact *ngIf="link.isContactActive"></app-contact>
+      <div class="editor-menu">
+        <div class="editor-tab one column" id="home" (click)="chooseDisplayed('home')" *ngIf="tab.isHomeActive">
+          <div class="two columns">Accueil.html</div>
+          <div class="close-button">X</div>
+        </div>
+        <div class="editor-tab one column" id="background" (click)="chooseDisplayed('background')"
+             *ngIf="tab.isBackgroundActive">
+          <div class="two columns">Parcours.html</div>
+          <div class="close-button">X</div>
+        </div>
+        <div class="editor-tab  one column" id="skills" (click)="chooseDisplayed('skills')" *ngIf="tab.isSkillActive">
+          <div class="two columns">Compétences.html</div>
+          <div class="close-button">X</div>
+        </div>
+        <div class="editor-tab  one column" id="projects" (click)="chooseDisplayed('projects')"
+             *ngIf="tab.isProjectsActive">
+          <div class="two columns">Projets.html</div>
+          <div class="close-button">X</div>
+        </div>
+        <div class="editor-tab  one column" id="contact" (click)="chooseDisplayed('contact')"
+             *ngIf="tab.isContactActive">
+          <div class="two columns">Contact.html</div>
+          <div class="close-button">X</div>
+        </div>
       </div>
+      <app-home *ngIf="link.isHomeActive"></app-home>
+      <app-about *ngIf="link.isAboutActive"></app-about>
+      <app-background *ngIf="link.isBackgroundActive"></app-background>
+      <app-skills *ngIf="link.isSkillActive"></app-skills>
+      <app-projects *ngIf="link.isProjectsActive"></app-projects>
+      <app-contact *ngIf="link.isContactActive"></app-contact>
+
     </div>
   </div>
   <div class="console row">
     <div class="console-menu">
-<div id="console-tab">Contact x </div>
+      <div id="console-tab">Contact x</div>
     </div>
     <app-console></app-console>
   </div>

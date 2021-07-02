@@ -5,15 +5,33 @@ height: 60vh;
 }
 
 .editor {
-  padding-top: 5vh;
+
   height: 60vh;
  background-color: #1D2433;
 }
-
-
+.editor-menu{
+  height: 3rem;
+  background-color: #1D2433;
+  border-bottom: 1px solid  #8b8b8b;
+  margin-bottom: 20px;
+}
+.close-button{
+  float: right;
+  margin-left: 34px;
+}
 .console {
   height: 40vh;
 background-color: #1D2433;
+}
+.editor-tab{
+  height : 100%;
+min-width: 180px;
+  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 0;
+  border-right: 1px solid #8b8b8b;
+  border-radius: 0 0 20px 0;
 }
 .console-menu{
   height: 25px;
