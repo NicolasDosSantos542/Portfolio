@@ -1,37 +1,33 @@
 <div class="">
   <div class="ide row">
-  <div class=" two columns">
-    <ul class=" menu container">
-      <li (click)="chooseDisplayed('home')">accueil</li>
-      <li (click)="chooseDisplayed('about')">à propos</li>
-      <li (click)="chooseDisplayed('background')">parcours</li>
-      <li (click)="chooseDisplayed('skills')">compétences</li>
-      <li (click)="chooseDisplayed('projects')">projets</li>
-      <li (click)="chooseDisplayed('contact')">contact</li>
-    </ul>
+    <div class=" two columns">
+      <ul class=" menu container">
+        <li (click)="chooseDisplayed('home')">accueil</li>
+        <li (click)="chooseDisplayed('about')">à propos</li>
+        <li (click)="chooseDisplayed('background')">parcours</li>
+        <li (click)="chooseDisplayed('skills')">compétences</li>
+        <li (click)="chooseDisplayed('projects')">projets</li>
+        <li (click)="chooseDisplayed('contact')">contact</li>
+      </ul>
 
 
-  </div>
-  <div class="editor ten columns">
-    <div class="<!--container-->">
-      <app-home   *ngIf="link.isHomeActive" ></app-home>
-      <app-about   *ngIf="link.isAboutActive" ></app-about>
-      <app-background   *ngIf="link.isBackgroundActive" ></app-background>
-      <app-skills   *ngIf="link.isSkillActive" ></app-skills>
-      <app-projects   *ngIf="link.isProjectsActive" ></app-projects>
-      <app-contact   *ngIf="link.isContactActive" ></app-contact>
+    </div>
+    <div class="editor ten columns">
+      <div class="<!--container-->">
+        <app-home *ngIf="link.isHomeActive"></app-home>
+        <app-about *ngIf="link.isAboutActive"></app-about>
+        <app-background *ngIf="link.isBackgroundActive"></app-background>
+        <app-skills *ngIf="link.isSkillActive"></app-skills>
+        <app-projects *ngIf="link.isProjectsActive"></app-projects>
+        <app-contact *ngIf="link.isContactActive"></app-contact>
+      </div>
     </div>
   </div>
-</div>
-<div class="console row">
-  <div class="">
+  <div class="console row">
+    <div class="console-menu">
+<div id="console-tab">Contact x </div>
+    </div>
     <app-console></app-console>
   </div>
 </div>
-</div>
 
-<!--
-
-
-
--->

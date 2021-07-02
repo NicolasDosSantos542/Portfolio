@@ -1,22 +1,37 @@
 
 .ide {
 height: 60vh;
-  background-color: #3a3d3f;
+  background-color: #171C28;
 }
 
 .editor {
   padding-top: 5vh;
   height: 60vh;
- background-color: #2b2b2b;
+ background-color: #1D2433;
 }
 
 
 .console {
   height: 40vh;
-background-color: #272727;
+background-color: #1D2433;
+}
+.console-menu{
+  height: 25px;
+  background-color: #414855;
+  border-top: 1px solid #8b8b8b;
+  border-bottom: 1px solid  #8b8b8b;
+  margin-bottom: 20px;
+}
+#console-tab{
+  display: inline-block;
+  padding-right: 5px;
+  border-right: 1px solid #8b8b8b;
+  border-left: 1px solid #8b8b8b;
 }
 .menu{
   margin-top: 10vh;
   margin-left: 25%;
   list-style: none;
+  background-color: #171C28;
+
 }
