@@ -26,15 +26,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm install
+      - name: npm install and npm run build
         run: |
           npm ci
-      - name: copy files
+          npm run build
+      - name: executing remote ssh commands using ssh key
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "."
-          target: "/root/nicolas-dds/"
+          source: "dist/doudou-front/"
+          target: "/var/www/doudou-front"
