@@ -1,5 +1,14 @@
 .home{
 margin-top: 5vh ;
 }
+h1{
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-
+p{
+  text-align: center;
+  margin-right:15px;
+  margin-left: 15px;
+  margin-bottom: 50px;
+}
