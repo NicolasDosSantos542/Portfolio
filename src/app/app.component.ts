@@ -53,6 +53,7 @@ export class AppComponent {
   }
 
 
+  // tslint:disable-next-line:typedef
   closeTab(element) {
     switch (element) {
       case 'home':
