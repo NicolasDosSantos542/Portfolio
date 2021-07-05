@@ -6,11 +6,21 @@
 }
 
 .menu {
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-left: 25%;
   list-style: none;
   background-color: #171C28;
 
+}
+.profile-pic{
+  height: 150px;
+  width: 150px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+.profile-pic>img{
+  margin: 25px 25px 25px 25px;
 }
 
 .editor {
