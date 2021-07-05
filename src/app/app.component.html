@@ -2,6 +2,7 @@
   <div class="ide row">
     <div class=" two columns">
       <div class="profile-pic"></div>
+      <div>
       <ul id="menu" class=" menu container">
         <li (click)="chooseDisplayed('home')">accueil</li>
         <li (click)="chooseDisplayed('background')">parcours</li>
@@ -9,7 +10,8 @@
         <li (click)="chooseDisplayed('projects')">projets</li>
         <li (click)="chooseDisplayed('contact')">contact</li>
       </ul>
-      <div id="toggler" (click)="displayMenu()"></div>
+      </div>
+      <div id="toggler" (click)="displayMenu($event)" (clickOutside)="displayMenu($event)"></div>
 
     </div>
     <div class="editor ten columns">

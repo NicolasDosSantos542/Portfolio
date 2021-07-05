@@ -54,11 +54,12 @@ export class AppComponent {
   }
 
   // tslint:disable-next-line:typedef
-  displayMenu() {
-    if (!this.toggler) {
+  displayMenu($event) {
+    console.log($event.target.id);
+    if (!this.toggler && $event.target.id === 'toggler') {
       this.toggler = true;
       document.getElementById('menu').style.display = 'block';
-    }else{
+    } else if (this.toggler ){
       this.toggler = false;
       document.getElementById('menu').style.display = 'none';
     }
