@@ -51,9 +51,14 @@
   margin-left: 0;
   border-right: 1px solid #8b8b8b;
   border-radius: 0 0 20px 0;
+  overflow: hidden;
 }
+
+
 .editor-tab:hover{
   background-color: #171C28;
+  width: 200px;
+
 }
 .editor-tab:active{
   background-color: #414855;
@@ -120,7 +125,9 @@
   }
 }
 @media(min-width:768px){
-
+  .menu {
+    display: block !important;
+  }
 }
 @media(max-width:992px){
   .profile-pic{
