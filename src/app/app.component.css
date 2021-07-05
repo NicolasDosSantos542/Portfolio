@@ -2,6 +2,7 @@
 .ide {
   height: 60vh;
   background-color: #171C28;
+  overflow: auto;
 }
 
 .menu {
@@ -45,7 +46,10 @@
   float: right;
   margin-left: 34px;
 }
-
+.liner{
+  height: 55vh;
+  overflow:hidden;
+}
 .console {
   height: 40vh;
   background-color: #1D2433;
