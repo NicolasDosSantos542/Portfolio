@@ -52,6 +52,10 @@ export class AppComponent {
     }
   }
 
+  // tslint:disable-next-line:typedef
+  displayMenu() {
+
+  }
 
   // tslint:disable-next-line:typedef
   closeTab(element) {

@@ -1,16 +1,15 @@
 <div class="">
   <div class="ide row">
     <div class=" two columns">
+      <div class="profile-pic"></div>
+      <div class="toggler" (click)="displayMenu"></div>
       <ul class=" menu container">
-        <div class="profile-pic"><img src="/assets/images/fox_icon_by_macrovectorFromFreepix.png" alt="image de profil"></div>
         <li (click)="chooseDisplayed('home')">accueil</li>
         <li (click)="chooseDisplayed('background')">parcours</li>
         <li (click)="chooseDisplayed('skills')">compétences</li>
         <li (click)="chooseDisplayed('projects')">projets</li>
         <li (click)="chooseDisplayed('contact')">contact</li>
       </ul>
-
-
     </div>
     <div class="editor ten columns">
       <div class="editor-menu">
