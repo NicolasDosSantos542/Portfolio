@@ -2,14 +2,15 @@
   <div class="ide row">
     <div class=" two columns">
       <div class="profile-pic"></div>
-      <div class="toggler" (click)="displayMenu"></div>
-      <ul class=" menu container">
+      <ul id="menu" class=" menu container">
         <li (click)="chooseDisplayed('home')">accueil</li>
         <li (click)="chooseDisplayed('background')">parcours</li>
         <li (click)="chooseDisplayed('skills')">compétences</li>
         <li (click)="chooseDisplayed('projects')">projets</li>
         <li (click)="chooseDisplayed('contact')">contact</li>
       </ul>
+      <div id="toggler" (click)="displayMenu()"></div>
+
     </div>
     <div class="editor ten columns">
       <div class="editor-menu">

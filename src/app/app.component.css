@@ -92,7 +92,7 @@
     display: flex;
     justify-content: space-around;
   }
-  .toggler{
+  #toggler{
     height: 100px;
     width:100px;
     background-image: url('../assets/images/toggler.png');
@@ -104,6 +104,10 @@
 
   .menu {
     display: none;
+    margin-left: 0;
+    margin-top: 0;
+    width: 12em;
+
 
   }
   .profile-pic{

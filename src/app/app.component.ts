@@ -21,6 +21,7 @@ export class AppComponent {
     isProjectsActive: false,
     isContactActive: false
   };
+  toggler = false;
 
   // tslint:disable-next-line:typedef
   chooseDisplayed(element) {
@@ -54,6 +55,13 @@ export class AppComponent {
 
   // tslint:disable-next-line:typedef
   displayMenu() {
+    if (!this.toggler) {
+      this.toggler = true;
+      document.getElementById('menu').style.display = 'block';
+    }else{
+      this.toggler = false;
+      document.getElementById('menu').style.display = 'none';
+    }
 
   }
 
