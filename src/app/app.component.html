@@ -1,15 +1,17 @@
 <div class="">
   <div class="ide row">
     <div class=" two columns">
-      <ul class=" menu container">
-        <div class="profile-pic"><img src="/assets/images/fox_icon_by_macrovectorFromFreepix.png" alt="image de profil"></div>
+      <div class="profile-pic"></div>
+      <div>
+      <ul id="menu" class=" menu container">
         <li (click)="chooseDisplayed('home')">accueil</li>
         <li (click)="chooseDisplayed('background')">parcours</li>
         <li (click)="chooseDisplayed('skills')">compétences</li>
         <li (click)="chooseDisplayed('projects')">projets</li>
         <li (click)="chooseDisplayed('contact')">contact</li>
       </ul>
-
+      </div>
+      <div id="toggler" (click)="displayMenu($event)" (clickOutside)="displayMenu($event)"></div>
 
     </div>
     <div class="editor ten columns">
@@ -45,7 +47,7 @@
       </div>
       <div class="row">
         <div class="liner one column">
-          <div *ngFor="let item of [].constructor(200); let i = index">
+          <div *ngFor="let item of [].constructor(50); let i = index">
             {{i}}
           </div>
         </div>

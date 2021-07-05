@@ -21,6 +21,7 @@ export class AppComponent {
     isProjectsActive: false,
     isContactActive: false
   };
+  toggler = false;
 
   // tslint:disable-next-line:typedef
   chooseDisplayed(element) {
@@ -52,6 +53,18 @@ export class AppComponent {
     }
   }
 
+  // tslint:disable-next-line:typedef
+  displayMenu($event) {
+    console.log($event.target.id);
+    if (!this.toggler && $event.target.id === 'toggler') {
+      this.toggler = true;
+      document.getElementById('menu').style.display = 'block';
+    } else if (this.toggler ){
+      this.toggler = false;
+      document.getElementById('menu').style.display = 'none';
+    }
+
+  }
 
   // tslint:disable-next-line:typedef
   closeTab(element) {

@@ -10,6 +10,7 @@ import { SkillsComponent } from './component/skills/skills.component';
 import { ProjectsComponent } from './component/projects/projects.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ConsoleComponent } from './component/console/console.component';
+import {ClickOutsideModule} from 'ng-click-outside';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ConsoleComponent } from './component/console/console.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClickOutsideModule
   ],
   providers: [],
   bootstrap: [AppComponent]
