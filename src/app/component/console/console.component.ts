@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-console',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./console.component.css']
 })
 export class ConsoleComponent implements OnInit {
+  value = '';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
