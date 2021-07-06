@@ -61,17 +61,17 @@
       </div>
     </div>
   </div>
-  <div class="console row">
+  <div class=" row" id="console">
     <div class="console-menu">
       <div id="console-tab one column">Contact x</div>
-      <div class="nine columns"></div>
+      <div class="nine columns" ></div>
       <div class="arrow one column">
-        <div id="down-arrow"></div>
-        <div id="up-arrow"></div>
+        <div id="down-arrow" (click)="moveConsole($event)"></div>
+        <div id="up-arrow" (click)="moveConsole($event)"></div>
       </div>
       <div class="one column">
 
-        <div id="line"></div>
+        <div id="line" (click)="moveConsole($event)"></div>
       </div>
     </div>
     <app-console></app-console>
