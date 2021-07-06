@@ -1,6 +1,5 @@
 
 .ide {
-  height: 60vh;
   background-color: #171C28;
   overflow: auto;
 }
@@ -26,14 +25,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 125px;
-  /*margin-bottom: 40px;*/
-  /*margin-left: 0;*/
   margin: 10px;
 }
 
 .editor {
 
-  height: 60vh;
+  height: 100vh;
   background-color: #1D2433;
   overflow: auto;
 }
@@ -47,7 +44,8 @@
 
 .editor-tab {
   height: 100%;
-  min-width: 180px;
+  /*min-width: 180px;*/
+  width: 20%;
   display: inline;
   padding-right: 10px;
   padding-left: 10px;
@@ -59,9 +57,8 @@
 
 
 .editor-tab:hover {
+  overflow: visible;
   background-color: #171C28;
-  width: 200px;
-
 }
 
 .editor-tab:active {
@@ -80,7 +77,10 @@
 }
 
 .console {
-  height: 40vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20vh;
   background-color: #1D2433;
 }
 
@@ -90,13 +90,39 @@
   border-top: 1px solid #8b8b8b;
   border-bottom: 1px solid #8b8b8b;
   margin-bottom: 20px;
+  display: flex;
+
+}
+.arrow{
+  display:flex
 }
 
+#up-arrow  {
+  width: 0;
+  height: 0;
+  border-left: 1.5em solid transparent;
+  border-right: 1.5em solid transparent;
+  border-bottom: 1.5em solid #8b8b8b;
+}
+
+#down-arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #8b8b8b;
+}
 #console-tab {
   display: inline-block;
   padding-right: 5px;
   border-right: 1px solid #8b8b8b;
   border-left: 1px solid #8b8b8b;
+}
+#line{
+  width: 25px;
+  height: 3px;
+  margin-top: 10px;
+  background-color: #8b8b8b;
 }
 
 @media (max-width: 767px) {
@@ -133,6 +159,7 @@
     /*margin-left: 0;*/
     margin: 1px !important;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -156,6 +183,13 @@
     margin: 10px;
   }
 
+  .one.column {
+    width: 4.66666666667%;
+  }
+
+  .eleven.columns {
+    width: 91.3333333333%;
+  }
 
 }
 
