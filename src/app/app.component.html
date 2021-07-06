@@ -74,6 +74,13 @@
         <div id="line" (click)="moveConsole($event)"></div>
       </div>
     </div>
+    <div id="rendererContainer"
+         draggable="true"
+         (dragstart)="onDragStart($event)"
+
+         (dragleave)="onDrop($event)"
+         (dragend)="onDragEnd($event)" cdkDrag>coucou
+    </div>
     <app-console></app-console>
   </div>
 </div>

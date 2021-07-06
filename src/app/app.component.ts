@@ -56,7 +56,6 @@ export class AppComponent {
 
   // tslint:disable-next-line:typedef
   displayMenu($event) {
-    console.log($event.target.id);
     if (!this.toggler && $event.target.id === 'toggler') {
       this.toggler = true;
       document.getElementById('menu').style.display = 'block';
@@ -108,5 +107,22 @@ export class AppComponent {
       this.consoleHeight = 5;
     }
     document.getElementById('console').style.height = this.consoleHeight + 'vh';
+  }
+
+  onDragStart($event) {
+    console.log(`starting`, $event);
+    // Hide dragged element
+
+    document.getElementById('console').style.height = $event.clientY + 'px';
+  }
+onDrop($event){
+  console.log('ondrop', $event.clientX, $event.clientY);
+}
+  onDragEnd($event) {
+    console.log('drag end', $event);
+    // Show dragged element again
+    console.log($event.clientX);
+    document.getElementById('console').style.height = $event.clientY + 'px';
+
   }
 }
