@@ -22,6 +22,7 @@ export class AppComponent {
     isContactActive: false
   };
   toggler = false;
+  consoleHeight = 20;
 
   // tslint:disable-next-line:typedef
   chooseDisplayed(element) {
@@ -59,7 +60,7 @@ export class AppComponent {
     if (!this.toggler && $event.target.id === 'toggler') {
       this.toggler = true;
       document.getElementById('menu').style.display = 'block';
-    } else if (this.toggler ){
+    } else if (this.toggler) {
       this.toggler = false;
       document.getElementById('menu').style.display = 'none';
     }
@@ -91,5 +92,21 @@ export class AppComponent {
         this.tab.isContactActive = false;
         break;
     }
+  }
+
+  // tslint:disable-next-line:typedef
+  moveConsole($event) {
+    if ($event.target.id === 'up-arrow' && this.consoleHeight !== 100) {
+      this.consoleHeight += 20;
+    }
+    if ($event.target.id === 'down-arrow' && this.consoleHeight !== 20) {
+      this.consoleHeight -= 20;
+    } else if ($event.target.id === 'down-arrow' && this.consoleHeight === 20) {
+      this.consoleHeight = 5;
+    }
+    if ($event.target.id === 'line') {
+      this.consoleHeight = 5;
+    }
+    document.getElementById('console').style.height = this.consoleHeight + 'vh';
   }
 }
