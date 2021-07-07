@@ -108,5 +108,6 @@ export class AppComponent {
       this.consoleHeight = 5;
     }
     document.getElementById('console').style.height = this.consoleHeight + 'vh';
+    document.getElementById('terminal').style.height = this.consoleHeight - 3 + 'vh';
   }
 }

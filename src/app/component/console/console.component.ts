@@ -39,6 +39,7 @@ export class ConsoleComponent implements OnInit {
         this.displayGit();
         break;
     }
+    document.getElementById('cmdInput').focus();
   }
 
   private displayComponents() {
