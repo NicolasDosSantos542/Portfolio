@@ -18,6 +18,8 @@ export class ConsoleComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   commandTerminal(value) {
+    const   terminal = document.getElementById('terminal');
+
     let cmd = value;
     if (value.includes(' ')) {
       cmd = value.substr(0, value.indexOf(' '));
@@ -25,6 +27,13 @@ export class ConsoleComponent implements OnInit {
     switch (cmd) {
       case 'help':
         this.isHelp = true;
+        terminal.scrollIntoView();
+        // terminal.scrollTo(0, terminal.scrollHeight);
+        console.log(terminal.scrollHeight);
+        console.log(terminal.clientHeight);
+        console.log('terminal', terminal);
+        // terminal.scrollTop = terminal.scrollHeight - terminal.clientHeight;
+        // terminal.scrollTo(0,  148);
         break;
       case 'ls':
         this.displayComponents();
@@ -33,13 +42,12 @@ export class ConsoleComponent implements OnInit {
         this.getCV();
         break;
       case 'recruit':
-        this. recruit();
+        this.recruit();
         break;
       case 'git':
         this.displayGit();
         break;
     }
-    document.getElementById('cmdInput').focus();
   }
 
   private displayComponents() {

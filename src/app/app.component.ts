@@ -56,7 +56,6 @@ export class AppComponent {
 
   // tslint:disable-next-line:typedef
   displayMenu($event) {
-    console.log($event.target.id);
     if (!this.toggler && $event.target.id === 'toggler') {
       this.toggler = true;
       document.getElementById('menu').style.display = 'block';
