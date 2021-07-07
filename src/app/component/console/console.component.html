@@ -1,7 +1,26 @@
-<div class="console">
+<div class="terminal">
   <div class="console-text">bienvenue dans le terminal, tapez help</div>
-  <input type="text" class="console-typing" [ngModel]="value">
+  <div class="help" *ngIf="isHelp">
+    <p>Commandes possibles:</p>
+    <p>
+      cd: afficher le chapitre passé en argument ('accueil', 'parcours', 'compétences', 'projets', 'contact')
+    </p>
+    <p>
+      ls: afficher la liste des chapitres
+    </p>
+    <p>
+      getCV : telecharger le CV en pdf
+    </p>
+    <p>
+      contact : afficher le formulaire de contact
+    </p>
+    <p>
+      recruit: completer le formulaire de contact en mode terminal
+    </p>
+    <p>
+      git : afficher la liste des projets sur github
+    </p>
+  </div>
+
+  <input type="text"  (keyup.enter)="commandTerminal(value)" class="console-typing" [(ngModel)]="value">
 </div>
-<div>{{value}}</div>
-<div class="controle">controle : welcome to console</div>
-<div class="test">test : welcome to console</div>

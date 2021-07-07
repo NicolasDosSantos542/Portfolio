@@ -1,5 +1,6 @@
-.console{
+.terminal{
   font-weight: bold;
+  overflow: auto;
 }
 .controle{
   font-weight: normal;
