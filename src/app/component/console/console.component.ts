@@ -1,4 +1,5 @@
 import {AfterViewChecked, Component, OnInit} from '@angular/core';
+import {logger} from "codelyzer/util/logger";
 
 @Component({
   selector: 'app-console',
@@ -8,7 +9,9 @@ import {AfterViewChecked, Component, OnInit} from '@angular/core';
 export class ConsoleComponent implements OnInit, AfterViewChecked {
   value = '';
   // str = '';
-  isHelp = false;
+  console = {
+    isHelp: false
+  };
 
   constructor() {
   }
@@ -34,16 +37,13 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
     if (value.includes(' ')) {
       cmd = value.substr(0, value.indexOf(' '));
     }
+
+    this.console.isHelp = false;
+
+
     switch (cmd) {
       case 'help':
-        this.isHelp = true;
-        terminal.scrollIntoView();
-        // terminal.scrollTo(0, terminal.scrollHeight);
-        console.log(terminal.scrollHeight);
-        console.log(terminal.clientHeight);
-        console.log('terminal', terminal);
-        // terminal.scrollTop = terminal.scrollHeight - terminal.clientHeight;
-        // terminal.scrollTo(0,  148);
+        this.console.isHelp = true;
         break;
       case 'ls':
         this.displayComponents();
