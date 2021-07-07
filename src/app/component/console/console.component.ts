@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-console',
   templateUrl: './console.component.html',
   styleUrls: ['./console.component.css']
 })
-export class ConsoleComponent implements OnInit {
+export class ConsoleComponent implements OnInit, AfterViewChecked {
   value = '';
   // str = '';
   isHelp = false;
@@ -16,9 +16,19 @@ export class ConsoleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewChecked(): void {
+    const terminal = document.getElementById('terminal');
+
+    terminal.scrollTo({
+      top: terminal.scrollHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   // tslint:disable-next-line:typedef
   commandTerminal(value) {
-    const   terminal = document.getElementById('terminal');
+    const terminal = document.getElementById('terminal');
 
     let cmd = value;
     if (value.includes(' ')) {
