@@ -81,8 +81,7 @@
   height: 20vh;
   background-color: #1D2433;
   overflow: hidden;
-  position: absolute;
-  bottom: 0px;
+
 }
 
 .console-menu {
@@ -133,7 +132,9 @@
     display: flex;
     justify-content: space-around;
   }
-
+  .one.column{
+    width: auto !important;
+  }
   #toggler {
     height: 100px;
     width: 100px;
