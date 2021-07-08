@@ -1,8 +1,17 @@
 <div id="terminal" >
   <div class="console-text">bienvenue dans le terminal, tapez help</div>
 <div id="terminal-content"></div>
+  <style>
+    #terminal div div {
+      background-color: #FFFFFF;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  </style>
 
-
-
-  <input type="text" id="cmdInput" (keyup.enter)="commandTerminal(value)" class="console-typing" [(ngModel)]="value">
+<div id="cmdForm">
+  <label>nicolas-dds></label> <input type="text" id="cmdInput" (keyup.enter)="commandTerminal(value)" class="console-typing" [(ngModel)]="value">
+</div>
 </div>

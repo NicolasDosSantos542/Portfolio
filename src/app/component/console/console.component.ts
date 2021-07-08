@@ -10,8 +10,16 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
   value = '';
   // str = '';
 
-  helpMessage = '  <div class="help" >    <p>Commandes possibles:</p>    <p>      cd: afficher le chapitre passé en argument (\'accueil\', \'parcours\', \'compétences\', \'projets\', \'contact\')    </p>    <p>      ls: afficher la liste des chapitres    </p>    <p>      getCV : telecharger le CV en pdf    </p>    <p>      contact : afficher le formulaire de contact    </p>    <p>      recruit: completer le formulaire de contact en mode terminal    </p>    <p>      git : afficher la liste des projets sur github    </p>  </div>';
-  lsMessage = ' <div>coucou</div>';
+  helpMessage = '  <style>#terminal div p {\n' +
+    '  margin-top: 0;\n' +
+    '  margin-bottom: 0;\n' +
+    '}</style>  <div class="help" >    <p>Commandes possibles:</p>    <p>      cd: afficher le chapitre passé en argument (\'accueil\', \'parcours\', \'compétences\', \'projets\', \'contact\')    </p>    <p>      ls: afficher la liste des chapitres    </p>    <p>      getCV : telecharger le CV en pdf    </p>    <p>      contact : afficher le formulaire de contact    </p>    <p>      recruit: completer le formulaire de contact en mode terminal    </p>    <p>      git : afficher la liste des projets sur github    </p>  </div>';
+  lsMessage = '<style>\n' +
+    '#terminal div ul {\n' +
+    '  margin-top: 0;\n' +
+    '  margin-bottom: 0;\n' +
+    '}</style> <div id="content-ls"> <ul id="ls-list" style=" display: flex; list-style: none; flex-wrap: wrap;"> <li style="  margin-right: 4em;">accueil</li> <li style="  margin-right: 4em;">parcours</li> <li style="  margin-right: 4em;">compétences</li> <li style="  margin-right: 4em;">projets</li> <li style="  margin-right: 4em;">contact</li> </ul> </div>';
+
   constructor() {
   }
 
@@ -37,7 +45,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
       cmd = value.substr(0, value.indexOf(' '));
     }
 
-
+    terminal.innerHTML += 'nicolas-dds>' + cmd + '<br/>';
 
 
     switch (cmd) {
@@ -60,6 +68,8 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
         this.displayGit();
         break;
     }
+    this.value = '';
+    this.ngOnInit();
   }
 
   private displayComponents() {
