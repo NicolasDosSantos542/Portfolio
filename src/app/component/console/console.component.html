@@ -1,6 +1,17 @@
-<div class="console">
-  <div class="console-text">gras : welcome to console</div>
-  <div class="console-typing"></div>
+<div id="terminal" >
+  <div class="console-text">bienvenue dans le terminal, tapez help</div>
+<div id="terminal-content"></div>
+  <style>
+    #terminal div div {
+      background-color: #FFFFFF;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  </style>
+
+<div id="cmdForm">
+  <label>nicolas-dds></label> <input type="text" id="cmdInput" (keyup.enter)="commandTerminal(value)" class="console-typing" [(ngModel)]="value">
 </div>
-<div class="controle">controle : welcome to console</div>
-<div class="test">test : welcome to console</div>
+</div>

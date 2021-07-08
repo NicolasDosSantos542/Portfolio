@@ -1,9 +1,33 @@
-.console{
+#terminal{
   font-weight: bold;
+  overflow: scroll;
+  position: absolute;
+  bottom : 0px;
+  width : 100%;
+  height : 17vh;
+}
+
+/*#terminal div p {*/
+/*  margin-top: 0;*/
+/*  margin-bottom: 0;*/
+/*}*/
+#ls-list{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+#ls-list li{
+  margin-right: 4em;
+
 }
 .controle{
   font-weight: normal;
 }
-.test{
-  font-weight: 1;
+#cmdForm{
+  display:flex;
+}
+#cmdInput{
+  border: none;
+  height: 1.5em;
+  background-color: #1D2433;
 }
