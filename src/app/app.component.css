@@ -1,4 +1,8 @@
+.content{
+overflow-x: hidden;
+  width: 100%;
 
+}
 .ide {
   background-color: #171C28;
   overflow: auto;
