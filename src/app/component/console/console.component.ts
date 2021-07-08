@@ -9,10 +9,9 @@ import {logger} from "codelyzer/util/logger";
 export class ConsoleComponent implements OnInit, AfterViewChecked {
   value = '';
   // str = '';
-  console = {
-    isHelp: false
-  };
 
+  helpMessage = '  <div class="help" >    <p>Commandes possibles:</p>    <p>      cd: afficher le chapitre passé en argument (\'accueil\', \'parcours\', \'compétences\', \'projets\', \'contact\')    </p>    <p>      ls: afficher la liste des chapitres    </p>    <p>      getCV : telecharger le CV en pdf    </p>    <p>      contact : afficher le formulaire de contact    </p>    <p>      recruit: completer le formulaire de contact en mode terminal    </p>    <p>      git : afficher la liste des projets sur github    </p>  </div>';
+  lsMessage = ' <div>coucou</div>';
   constructor() {
   }
 
@@ -31,19 +30,19 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
 
   // tslint:disable-next-line:typedef
   commandTerminal(value) {
-    const terminal = document.getElementById('terminal');
+    const terminal = document.getElementById('terminal-content');
 
     let cmd = value;
     if (value.includes(' ')) {
       cmd = value.substr(0, value.indexOf(' '));
     }
 
-    this.console.isHelp = false;
+
 
 
     switch (cmd) {
       case 'help':
-        this.console.isHelp = true;
+        terminal.innerHTML += this.helpMessage;
         break;
       case 'ls':
         this.displayComponents();
@@ -61,6 +60,9 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
   }
 
   private displayComponents() {
+    const terminal = document.getElementById('terminal-content');
+
+    terminal.innerHTML += this.lsMessage;
 
   }
 
