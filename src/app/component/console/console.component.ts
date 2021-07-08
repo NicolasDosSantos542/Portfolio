@@ -50,6 +50,9 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
       case 'getCV':
         this.getCV();
         break;
+      case 'cd':
+        this.cdCommand();
+        break;
       case 'recruit':
         this.recruit();
         break;
@@ -75,6 +78,10 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
   }
 
   private displayGit() {
+
+  }
+
+  private cdCommand() {
 
   }
 }
