@@ -56,7 +56,6 @@ export class AppComponent {
 
   // tslint:disable-next-line:typedef
   displayMenu($event) {
-    console.log($event.target.id);
     if (!this.toggler && $event.target.id === 'toggler') {
       this.toggler = true;
       document.getElementById('menu').style.display = 'block';
@@ -108,5 +107,6 @@ export class AppComponent {
       this.consoleHeight = 5;
     }
     document.getElementById('console').style.height = this.consoleHeight + 'vh';
+    document.getElementById('terminal').style.height = this.consoleHeight - 3 + 'vh';
   }
 }

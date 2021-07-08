@@ -11,6 +11,7 @@ import { ProjectsComponent } from './component/projects/projects.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ConsoleComponent } from './component/console/console.component';
 import {ClickOutsideModule} from 'ng-click-outside';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ClickOutsideModule} from 'ng-click-outside';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
