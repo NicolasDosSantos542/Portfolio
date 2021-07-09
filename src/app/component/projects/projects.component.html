@@ -1,3 +1,11 @@
 <div class="projects">
 
 </div>
+
+<img src="assets/images/projects/dircord/home.png" (click)="showLightbox(0)" />
+
+<ng-image-fullscreen-view
+  [images]="imageObject"
+  [imageIndex]="selectedImageIndex"
+  [show]="showFlag"
+  (close)="closeEventHandler()"></ng-image-fullscreen-view>
