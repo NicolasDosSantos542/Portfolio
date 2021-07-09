@@ -1,0 +1,13 @@
+<img src="{{proj.miniature}}" (click)="showLightbox(0)" alt="miniature de projet" />
+
+
+<a href="http://ludilogie.fr/espri/home" target="_blank" *ngIf="proj.miniature === 'assets/images/projects/miniatures/espri_small.png'">
+  <ng-image-fullscreen-view
+    [images]="imageObject"
+    [imageIndex]="selectedImageIndex"
+    [show]="showFlag"
+    (close)="closeEventHandler()">
+
+  </ng-image-fullscreen-view>
+
+</a>
