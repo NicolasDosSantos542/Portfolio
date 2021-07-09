@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+  ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeoRQKPkR552tt35ufXG2ICc8EpbDAThF3-QMSr-f9kWR11xg/viewform?usp=sf_link';
+  MESSAGE_ID = 'entry.1555308058';
+  EMAIL_ID = 'entry.198411971';
+  NAME_ID = 'entry.730840068';
+  CORS_PROXY = '';
+
+
+
 
   ngOnInit(): void {
   }
-
+// tslint:disable-next-line:typedef
+  onFormSubmit(formData: NgForm) {
+    console.log(formData);
+  }
 }
