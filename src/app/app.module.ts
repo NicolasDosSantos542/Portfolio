@@ -13,6 +13,7 @@ import { ConsoleComponent } from './component/console/console.component';
 import {ClickOutsideModule} from 'ng-click-outside';
 import {FormsModule} from '@angular/forms';
 import {NgImageFullscreenViewModule} from 'ng-image-fullscreen-view';
+import { FullScreenViewComponent } from './component/projects/full-screen-view/full-screen-view.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {NgImageFullscreenViewModule} from 'ng-image-fullscreen-view';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
-    ConsoleComponent
+    ConsoleComponent,
+    FullScreenViewComponent
   ],
   imports: [
     BrowserModule,
