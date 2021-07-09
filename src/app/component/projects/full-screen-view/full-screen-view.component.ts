@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-full-screen-view',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./full-screen-view.component.css']
 })
 export class FullScreenViewComponent implements OnInit {
-
+  @Input()
+  project: any;
   showFlag = false;
   selectedImageIndex = -1;
   private currentIndex: number;
@@ -22,6 +23,7 @@ export class FullScreenViewComponent implements OnInit {
     alt: 'Image alt' // Optional: You can use this key if want to show image with alt
   }
   ];
+  
 
   constructor() {
   }
