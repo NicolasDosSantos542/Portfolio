@@ -6,29 +6,32 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./full-screen-view.component.css']
 })
 export class FullScreenViewComponent implements OnInit {
-  @Input()
-  project: any;
+  @Input()  proj: any;
+  miniature = 'https://via.placeholder.com/600x300' ;
   showFlag = false;
   selectedImageIndex = -1;
   private currentIndex: number;
   imageObject: Array<object> = [{
-    image: 'assets/images/projects/dircord/home.png',
+    image: '',
   }, {
-    image: 'assets/images/projects/dircord/joinchan.png',
-    alt: 'alt of image', // Optional
-    title: 'title of image' // Optional: Show image with description text
+    image: '',
+    alt: '',
+    title: ''
   }, {
-    image: 'assets/images/projects/dircord/messenger.png', // Support base64 image
-    title: 'Image title', // Optional: You can use this key if want to show image with title
-    alt: 'Image alt' // Optional: You can use this key if want to show image with alt
+    image: '',
+    title: '',
+    alt: ''
   }
   ];
-  
+
+
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.imageObject = this.proj.array;
+    console.log('project', this.proj);
   }
 
   // tslint:disable-next-line:typedef
