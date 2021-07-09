@@ -12,18 +12,17 @@ export class ProjectsComponent implements OnInit {
       miniature: 'assets/images/projects/miniatures/dircord_small.png',
       array: [{
         image: 'assets/images/projects/dircord/home.png',
+        alt: 'dircord accueil',
+        title: 'messagerie en ligne: react et express'
       }, {
-        image: 'assets/images/projects/dircord/bbcodes.png',
-        alt: 'alt of image', // Optional
-        title: 'title of image' // Optional: Show image with description text
+        image: 'assets/images/projects/dircord/messenger.png',
+        alt: 'fenêtre messagerie'
       }, {
         image: 'assets/images/projects/dircord/joinchan.png',
-        alt: 'alt of image', // Optional
-        title: 'title of image' // Optional: Show image with description text
+        alt: 'joindre salon méthode graphique',
       }, {
-        image: 'assets/images/projects/dircord/messenger.png', // Support base64 image
-        title: 'Image title', // Optional: You can use this key if want to show image with title
-        alt: 'Image alt' // Optional: You can use this key if want to show image with alt
+        image: 'assets/images/projects/dircord/bbcodes.png',
+        alt: 'BBcodes disponibles',
       }
       ]
     }
@@ -32,14 +31,8 @@ export class ProjectsComponent implements OnInit {
       miniature: 'assets/images/projects/miniatures/espri_small.png',
       array: [{
         image: 'assets/images/projects/espri/espri.png',
-      }, {
-        image: 'assets/images/projects/espri/espri.png',
-        alt: 'alt of image', // Optional
-        title: 'title of image' // Optional: Show image with description text
-      }, {
-        image: 'assets/images/projects/espri/espri.png', // Support base64 image
-        title: 'Image title', // Optional: You can use this key if want to show image with title
-        alt: 'Image alt' // Optional: You can use this key if want to show image with alt
+        alt: 'fiche de personnage',
+        title: 'projet perso (en ligne) fiche de personnage de jeu de rôle : Angular'
       }
       ]
     }
@@ -49,19 +42,18 @@ export class ProjectsComponent implements OnInit {
       array:
         [{
           image: 'assets/images/projects/freeads/annonce.png',
+          alt: 'page des annonces',
+          title: 'site de petites annonces en ligne: Laravel'
         }, {
           image: 'assets/images/projects/freeads/connect.png',
-          alt: 'alt of image', // Optional
-          title: 'title of image' // Optional: Show image with description text
+          alt: 'page de connexion',
         }, {
-          image: 'assets/images/projects/freeads/home.png', // Support base64 image
-          title: 'Image title', // Optional: You can use this key if want to show image with title
-          alt: 'Image alt' // Optional: You can use this key if want to show image with alt
+          image: 'assets/images/projects/freeads/home.png',
+          alt: 'page d\'accueil '
         },
           {
-            image: 'assets/images/projects/freeads/signin.png', // Support base64 image
-            title: 'Image title', // Optional: You can use this key if want to show image with title
-            alt: 'Image alt' // Optional: You can use this key if want to show image with alt
+            image: 'assets/images/projects/freeads/signin.png',
+            alt: 'page d\'inscription'
           }
         ]
     }
@@ -71,18 +63,17 @@ export class ProjectsComponent implements OnInit {
       array:
         [{
           image: 'assets/images/projects/my_quizz/main-page.png',
+          alt: 'page principale,',
+          title: 'quizz collaboratif en ligne: Symfony'
         }, {
           image: 'assets/images/projects/my_quizz/stats-quizz.png',
-          alt: 'alt of image', // Optional
-          title: 'title of image' // Optional: Show image with description text
+          alt: 'stats quizz', // Optional
         }, {
           image: 'assets/images/projects/my_quizz/stats-quizzplus.png',
-          alt: 'alt of image', // Optional
-          title: 'title of image' // Optional: Show image with description text
+          alt: 'stats quizz plus', // Optional
         }, {
           image: 'assets/images/projects/my_quizz/stats-user.png', // Support base64 image
-          title: 'Image title', // Optional: You can use this key if want to show image with title
-          alt: 'Image alt' // Optional: You can use this key if want to show image with alt
+          alt: 'stats utilisateur' // Optional: You can use this key if want to show image with alt
         }
         ]
     }
