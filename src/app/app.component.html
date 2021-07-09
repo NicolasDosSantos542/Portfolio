@@ -68,12 +68,12 @@
 
       </div>
       <div class="arrow one column">
-        <div id="down-arrow" (click)="moveConsole($event)"></div>
-        <div id="up-arrow" (click)="moveConsole($event)"></div>
+        <div id="down-arrow" title="agrandir le terminal" (click)="moveConsole($event)"></div>
+        <div id="up-arrow" title="diminuer le terminal" (click)="moveConsole($event)"></div>
       </div>
       <div class="one column">
 
-        <div id="line" (click)="moveConsole($event)"></div>
+        <div id="line" title = "réduire le terminal" (click)="moveConsole($event)"></div>
       </div>
     </div>
     <app-console></app-console>
