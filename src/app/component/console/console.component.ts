@@ -45,7 +45,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
       cmd = value.substr(0, value.indexOf(' '));
     }
 
-    terminal.innerHTML += 'nicolas-dds>' + cmd + '<br/>';
+    terminal.innerHTML += 'nicolas-dds>' + value + '<br/>';
 
 
     switch (cmd) {
