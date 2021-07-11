@@ -14,6 +14,7 @@ import {ClickOutsideModule} from 'ng-click-outside';
 import {FormsModule} from '@angular/forms';
 import {NgImageFullscreenViewModule} from 'ng-image-fullscreen-view';
 import { FullScreenViewComponent } from './component/projects/full-screen-view/full-screen-view.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FullScreenViewComponent } from './component/projects/full-screen-view/f
     AppRoutingModule,
     ClickOutsideModule,
     NgImageFullscreenViewModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

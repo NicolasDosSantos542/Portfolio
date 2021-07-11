@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {MessagesService} from '../../services/messages.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,23 +9,33 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() {
+
+  constructor(private messageService: MessagesService) {
+
   }
-  formData = {};
-  ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeoRQKPkR552tt35ufXG2ICc8EpbDAThF3-QMSr-f9kWR11xg/viewform?usp=sf_link';
-  MESSAGE_ID = 'entry.1555308058';
-  EMAIL_ID = 'entry.198411971';
-  NAME_ID = 'entry.730840068';
-  CORS_PROXY = '';
 
-
+  formData = {
+    contact: undefined,
+    sujet: undefined,
+    message: undefined
+  };
 
 
   ngOnInit(): void {
   }
+
 // tslint:disable-next-line:typedef
-  onFormSubmit(form: NgForm) {
+  async onFormSubmit(form: NgForm) {
     this.formData = form.form.value;
+    const request = {
+      contact: this.formData.contact,
+      sujet: this.formData.sujet,
+      message: this.formData.message,
+      to: '60eb433b3fbbf1035ab5252a'
+    };
+    (await this.messageService.sendForm(request)).subscribe(() => {
+      alert('message envoyé');
+    });
     console.log(this.formData);
   }
 }
