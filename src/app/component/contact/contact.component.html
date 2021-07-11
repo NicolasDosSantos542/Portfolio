@@ -1,6 +1,6 @@
 <div class="form-box">
   <h1>me contacter</h1>
-  <form #formData="ngForm"  (ngSubmit)="onFormSubmit(formData)" action="" method="post">
+  <form #formData="ngForm" (ngSubmit)="onFormSubmit(formData)" action="" method="post">
 
     <label for="email">Email</label>
     <input id="email" type="email" name="contact" ngModel>
@@ -10,6 +10,12 @@
 
     <label for="message">Message</label>
     <textarea id="message" name="message" ngModel></textarea>
-    <input class="button-primary" type="submit" value="Submit" />
+    <input class="button-primary" type="submit" value="Submit"/>
   </form>
+  <p>
+    <a href="/assets/CV_NicolasDDS.pdf" class="btn btn-default skills_cvBtn" download="CV_NicolasDDS.pdf">Télécharger
+    mon cv</a></p>
+
+  <p><a href="https://nicolasdossantos542.github.io/CV/">voir mon CV(web)</a></p>
+
 </div>
