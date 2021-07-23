@@ -26,16 +26,7 @@ export class ProjectsComponent implements OnInit {
       }
       ]
     }
-    ,
-    {
-      miniature: 'assets/images/projects/miniatures/espri_small.png',
-      array: [{
-        image: 'assets/images/projects/espri/espri.png',
-        alt: 'fiche de personnage',
-        title: 'projet perso (en ligne) fiche de personnage de jeu de rôle : Angular'
-      }
-      ]
-    }
+
     ,
     {
       miniature: 'assets/images/projects/miniatures/freeads_small.png',
@@ -76,6 +67,16 @@ export class ProjectsComponent implements OnInit {
           alt: 'stats utilisateur' // Optional: You can use this key if want to show image with alt
         }
         ]
+    }
+    ,
+    {
+      miniature: 'assets/images/projects/miniatures/espri_small.png',
+      array: [{
+        image: 'assets/images/projects/espri/espri.png',
+        alt: 'fiche de personnage',
+        title: 'projet perso (en ligne) fiche de personnage de jeu de rôle : Angular'
+      }
+      ]
     }
   ];
 
