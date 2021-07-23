@@ -11,3 +11,7 @@ h1, p {
 input, textarea {
   width: 100%;
 }
+.submit {
+  background-color: #BAE67E;
+
+}

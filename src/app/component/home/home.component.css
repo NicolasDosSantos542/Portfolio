@@ -4,6 +4,8 @@ margin-top: 5vh ;
 h1{
   text-align: center;
   margin-bottom: 50px;
+  color: #5CCFE6;
+  font-size: 3em;
 }
 
 p{
@@ -11,4 +13,15 @@ p{
   margin-right:15px;
   margin-left: 15px;
   margin-bottom: 50px;
+
+}
+em{
+  font-style: normal;
+  color: #D6BE5C;
+
+}
+h3{
+  text-align: center;
+  margin-bottom: 50px;
+  color: #BAE67E;
 }
