@@ -76,7 +76,7 @@
         <div id="line" title = "réduire le terminal" (click)="moveConsole($event)"></div>
       </div>
     </div>
-    <app-console></app-console>
+    <app-console (goToPage)="chooseDisplayed($event)" ></app-console>
   </div>
 </div>
 

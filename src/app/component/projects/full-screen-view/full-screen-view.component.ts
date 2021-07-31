@@ -31,7 +31,6 @@ export class FullScreenViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.imageObject = this.proj.array;
-    console.log('project', this.proj);
   }
 
   // tslint:disable-next-line:typedef
