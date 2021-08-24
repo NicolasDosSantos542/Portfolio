@@ -24,6 +24,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 // tslint:disable-next-line:typedef
   async onFormSubmit(form: NgForm) {
     this.formData = form.form.value;
