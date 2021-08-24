@@ -105,8 +105,9 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
 
   }
 
-  private getCV() {
-
+   private getCV(): void {
+    const downloadCv = document.getElementById('download');
+    downloadCv.click();
   }
 
   private recruit() {

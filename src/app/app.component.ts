@@ -26,13 +26,11 @@ export class AppComponent {
 
   // tslint:disable-next-line:typedef
   chooseDisplayed(element) {
-    console.log('début', element);
     Object.keys(this.link).forEach(val => {
       this.link[val] = false;
     });
     switch (element) {
       case 'home':
-        console.log("entrée dans home");
         this.link.isHomeActive = true;
         this.tab.isHomeActive = true;
         break;
