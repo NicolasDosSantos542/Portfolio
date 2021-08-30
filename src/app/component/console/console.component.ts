@@ -17,9 +17,10 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
     ' <p>cd: afficher le chapitre passé en argument (\'accueil\', \'parcours\', \'compétences\', \'projets\', \'contact\')</p>' +
     '<p>ls: afficher la liste des chapitres    </p>  ' +
     '  <p>      getCV : telecharger le CV en pdf    </p>  ' +
-    '  <p>      contact : afficher le formulaire de contact    </p>  ' /*+
-    '  <p>      recruit: completer le formulaire de contact en mode terminal    </p> ' +
-    '   <p>      git : afficher la liste des projets sur github    </p>  </div>'*/
+  '  <p>      contact : afficher le formulaire de contact    </p>  ' +
+    '  <p>     git : lien vers le github du portfolio     </p> '/* +
+    '   <p>   recruit: completer le formulaire de contact en mode terminal      </p>  </div>'
+    */
   ;
   lsMessage = '<style>\n' +
     '#terminal div ul {\n' +
@@ -115,7 +116,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
   }
 
   private displayGit() {
-
+    window.open('https://github.com/NicolasDosSantos542/portfolio', '_blank');
   }
 
   // tslint:disable-next-line:typedef
