@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {AfterViewChecked, Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-console',
@@ -10,6 +10,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
   // str = '';
   @Output() goToPage = new EventEmitter<string>();
 
+
   helpMessage = '  <style>#terminal div p {\n' +
     '  margin-top: 0;\n' +
     '  margin-bottom: 0;\n' +
@@ -17,7 +18,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
     ' <p>cd: afficher le chapitre passé en argument (\'accueil\', \'parcours\', \'compétences\', \'projets\', \'contact\')</p>' +
     '<p>ls: afficher la liste des chapitres    </p>  ' +
     '  <p>      getCV : telecharger le CV en pdf    </p>  ' +
-  '  <p>      contact : afficher le formulaire de contact    </p>  ' +
+    '  <p>      contact : afficher le formulaire de contact    </p>  ' +
     '  <p>     git : lien vers le github du portfolio     </p> '/* +
     '   <p>   recruit: completer le formulaire de contact en mode terminal      </p>  </div>'
     */
@@ -62,7 +63,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
       secondPart = secondPart.trim();
       if (secondPart.includes(' ')) {
         param = secondPart.substr(0, secondPart.indexOf(' '));
-      }else {
+      } else {
         param = secondPart.substr(0, secondPart.length);
       }
       console.log('param', param);
@@ -106,15 +107,25 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
 
   }
 
-   private getCV(): void {
+  private getCV(): void {
     const downloadCv = document.getElementById('download');
     downloadCv.click();
   }
 
+  // tslint:disable-next-line:typedef
   private recruit() {
-
+    const terminal = document.getElementById('terminal-content');
+    const cmdForm = document.getElementById('cmdForm');
+    const recruitForm = document.getElementById('recruitForm');
+    const recruitInput = document.getElementById('recruitInput');
+    cmdForm.className = 'hide';
+    recruitForm.className = '';
+    recruitInput.focus();
+    terminal.innerHTML += 'quelle est votre adresse email? <br/>';
+    this.goToPage.emit('contact');
   }
 
+  // tslint:disable-next-line:typedef
   private displayGit() {
     window.open('https://github.com/NicolasDosSantos542/portfolio', '_blank');
   }
@@ -142,9 +153,18 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
       case 'contact':
         element = 'contact';
         break;
-        default:
-          return null;
+      default:
+        return null;
     }
     this.goToPage.emit(element);
+  }
+
+  // tslint:disable-next-line:typedef
+  fillContact(value: string) {
+    const terminal = document.getElementById('terminal-content');
+    const recruitForm = document.getElementById('recruitForm');
+    const recruitInput = document.getElementById('recruitInput');
+    terminal.innerHTML += value + '<br/>';
+    value = '';
   }
 }

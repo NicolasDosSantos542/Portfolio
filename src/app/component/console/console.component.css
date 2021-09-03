@@ -1,31 +1,44 @@
-#terminal{
+#terminal {
   font-weight: bold;
   overflow: scroll;
-  width : 100%;
-  height : 17vh;
+  width: 100%;
+  height: 17vh;
 }
 
 /*#terminal div p {*/
 /*  margin-top: 0;*/
 /*  margin-bottom: 0;*/
 /*}*/
-#ls-list{
+#ls-list {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
 }
-#ls-list li{
+
+#ls-list li {
   margin-right: 4em;
 
 }
-.controle{
+
+.controle {
   font-weight: normal;
 }
-#cmdForm{
-  display:flex;
+
+#cmdForm {
+  display: flex;
 }
-#cmdInput{
+
+#recruitForm {
+  display: flex;
+}
+
+#cmdInput ,
+#recruitInput {
   border: none;
   height: 1.5em;
   background-color: #1D2433;
+}
+
+.hide {
+  display: none !important;
 }

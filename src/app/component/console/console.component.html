@@ -1,6 +1,6 @@
-<div id="terminal" >
+<div id="terminal">
   <div class="console-text">bienvenue dans le terminal, tapez help</div>
-<div id="terminal-content"></div>
+  <div id="terminal-content"></div>
   <style>
     #terminal div div {
       background-color: #FFFFFF;
@@ -11,7 +11,12 @@
     }
   </style>
 
-<div id="cmdForm">
-  <label>nicolas-dds></label> <input type="text" id="cmdInput" (keyup.enter)="commandTerminal(value)" class="console-typing" [(ngModel)]="value">
-</div>
+  <div id="cmdForm" class="">
+    <label>nicolas-dds></label> <input type="text" id="cmdInput" (keyup.enter)="commandTerminal(value)"
+                                       class="console-typing" [(ngModel)]="value">
+  </div>
+  <div id="recruitForm" class="hide">
+    <label>></label> <input type="text" id="recruitInput"  (keyup.enter)="fillContact(value)"  class="console-typing"
+                          [(ngModel)]="value">
+  </div>
 </div>
