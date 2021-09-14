@@ -1,12 +1,13 @@
 /* espacement */
-
+.dKmagic{
+  font-family:  monospace !important;
+  color: #000000 !important;
+}
 table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid purple;
-  font-family:  monospace !important;
-  color: #000000 !important;
+
 }
 
 thead th:nth-child(1) {
@@ -33,4 +34,14 @@ th, td {
 }
 .impair{
   background-color: #cbcbcb;
+}
+.active{
+  background-color: #232323;
+  color: #fff;
+
+}
+.niveau,
+.niveau>p{
+  display: flex;
+ margin: 20px;
 }

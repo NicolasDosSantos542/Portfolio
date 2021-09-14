@@ -1,14 +1,45 @@
+<div class="dKmagic">
+  <table>
+    <tr>
+      <th>PM</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+    <tr *ngFor="let row of effects" class="{{row.class}}">
+      <th>{{row.name}}</th>
+      <td *ngFor="let value of row.values" (click)="toggleClass($event, 'active', value.pm)">{{value.name}}</td>
+    </tr>
+  </table>
 
-<table><tr>
-  <th>PM</th>
-  <th>0</th>
-  <th>1</th>
-  <th>2</th>
-  <th>3</th>
-  <th>4</th>
-</tr>
-<tr *ngFor="let row of effects" class="{{row.class}}">
-  <th>{{row.name}}</th>
-  <td *ngFor="let value of row.values"  (click)="handleClick(value.pm)" data-target="{{value.pm}}">{{value.name}}</td>
-</tr>
-</table>
+  <!--<div class="niveau">
+  <div>
+    <input type="radio" id="amateur" name="niveau"
+           checked>
+    <label for="amateur">amateur</label>
+  </div>
+
+  <div>
+    <input type="radio" id="professionnel" name="niveau">
+    <label for="professionnel">professionnel</label>
+  </div>
+  <div>
+    <input type="radio" id="brutasse" name="niveau">
+    <label for="brutasse">brutasse</label>
+  </div>
+  </div>
+  <div class="niveau">
+    <input type="checkbox" id="known" name="known">
+    <label for="known">mémorisé</label>
+  </div>
+  <input type="checkbox" [(ngModel)]="known" (change)="checkValue(known?'1':'0')" (click)="calculatePm()" />-->
+  <div class="niveau">
+  <input type="number" min="0" max="6" placeholder="vos PM de base"
+          (change)="handleClick($event)">
+  <p>PM de construction = {{pm }}</p>
+  <p>PM de calcul = {{pm-base}}</p>
+  <p>FD = {{fd}}</p>
+  <p>difficulté = {{ diff }}</p>
+</div></div>

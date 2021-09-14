@@ -9,7 +9,7 @@ export class DKmagicComponent implements OnInit {
   effects = [
     {
       name: ' portée',
-      class : 'impair',
+      class: 'impair',
       values:
         [
           {pm: 0, name: 'mêlée'},
@@ -21,7 +21,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: ' durée',
-      class : 'pair',
+      class: 'pair',
       values:
         [
           {pm: 0, name: 'instantanné ou 1 tour'},
@@ -33,7 +33,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Cibles ou zone',
-      class : 'impair',
+      class: 'impair',
       values:
         [
           {pm: 0, name: '1 ou chaise'},
@@ -45,7 +45,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Délai',
-      class : 'pair',
+      class: 'pair',
       values:
         [
           {pm: 0, name: 'tout de suite'},
@@ -57,7 +57,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Effets génériques',
-      class : 'impair',
+      class: 'impair',
       values:
         [
           {pm: 0, name: 'amateurs'},
@@ -69,7 +69,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Dégâts & Soins',
-      class : 'pair',
+      class: 'pair',
       values:
         [
           {pm: 0, name: '1d6 + caractéristique'},
@@ -81,7 +81,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Coups spéciaux',
-      class : 'impair',
+      class: 'impair',
       values:
         [
           {pm: 0, name: ''},
@@ -93,7 +93,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Modificateur compétence',
-      class : 'pair',
+      class: 'pair',
       values:
         [
           {pm: 0, name: '+1/-1	'},
@@ -105,7 +105,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'FD invocation de combat',
-      class : 'impair',
+      class: 'impair',
       values:
         [
           {pm: 0, name: '-'},
@@ -117,7 +117,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Niveau d\'invocation',
-      class : 'pair',
+      class: 'pair',
       values:
         [
           {pm: 0, name: '1'},
@@ -128,6 +128,13 @@ export class DKmagicComponent implements OnInit {
         ]
     },
   ];
+  base = 0;
+  pm = 0;
+  fd: number;
+  diff: number;
+  level = 1;
+  known = 0;
+  isChecked: any;
 
   constructor() {
   }
@@ -136,8 +143,39 @@ export class DKmagicComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  handleClick(pm: any) {
-    console.log('pm en question:', pm);
+  toggleClass(event: any, className: string, pm: number) {
+    const hasClass = event.target.classList.contains(className);
+    if (event.target.innerText !== '-') {
+      console.log(pm);
+      if (hasClass) {
+        event.target.classList.remove(className);
+        this.pm -= pm;
+      } else {
+        this.pm += pm;
+        event.target.className += className;
+      }
+      this.calculateFd();
+    }
+  }
+
+
+  // tslint:disable-next-line:typedef
+  calculateFd() {
+    this.fd = Math.ceil((this.pm - this.base) / 2);
+    this.diff = 20 + (this.fd * 5);
+  }
+
+  // tslint:disable-next-line:typedef
+  checkValue(event: any) {
+    console.log(event);
+  }
+
+  // tslint:disable-next-line:typedef
+  handleClick(event) {
+    this.base = event.target.value;
+    console.log('coucou' , this.base);
+    console.log('pm = ', this.pm);
+    this.calculateFd();
   }
 }
 

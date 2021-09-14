@@ -22,7 +22,7 @@
   width: 150px;
   background-color: #FFFFFF;
   border-radius: 50%;
-  background-image: url('../assets/images/fox_icon_by_macrovectorFromFreepix.png');
+  background-image: url('../../assets/images/fox_icon_by_macrovectorFromFreepix.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 125px;
@@ -141,7 +141,7 @@
   #toggler {
     height: 100px;
     width: 100px;
-    background-image: url('../assets/images/toggler.png');
+    background-image: url('../../assets/images/toggler.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
