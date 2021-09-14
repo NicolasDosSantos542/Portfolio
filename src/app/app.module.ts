@@ -15,6 +15,8 @@ import {FormsModule} from '@angular/forms';
 import {NgImageFullscreenViewModule} from 'ng-image-fullscreen-view';
 import { FullScreenViewComponent } from './component/projects/full-screen-view/full-screen-view.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DKmagicComponent } from './others/d-kmagic/d-kmagic.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {HttpClientModule} from '@angular/common/http';
     ProjectsComponent,
     ContactComponent,
     ConsoleComponent,
-    FullScreenViewComponent
+    FullScreenViewComponent,
+    DKmagicComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

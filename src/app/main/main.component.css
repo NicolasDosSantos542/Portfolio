@@ -1,0 +1,204 @@
+
+.ide {
+  background-color: #171C28;
+  overflow: auto;
+}
+
+.toggler {
+  display: none;
+}
+
+.menu {
+  margin-top: 5vh;
+  margin-left: 25%;
+  list-style: none;
+  background-color: #171C28;
+  color: #D6BE5C ;
+
+}
+
+.profile-pic {
+  height: 150px;
+  width: 150px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  background-image: url('../assets/images/fox_icon_by_macrovectorFromFreepix.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 125px;
+  margin: 10px;
+}
+
+.editor {
+
+  height: 100vh;
+  background-color: #1D2433;
+  overflow: auto;
+}
+
+.editor-menu {
+  height: 3rem;
+  background-color: #1D2433;
+  border-bottom: 1px solid #8b8b8b;
+  margin-bottom: 20px;
+}
+
+.editor-tab {
+  height: 100%;
+  /*min-width: 180px;*/
+  width: 20%;
+  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 0;
+  border-right: 1px solid #8b8b8b;
+  border-radius: 0 0 20px 0;
+  overflow: hidden;
+}
+
+
+.editor-tab:hover {
+  overflow: visible;
+  background-color: #171C28;
+}
+
+.editor-tab:active {
+  background-color: #414855;
+}
+
+.close-button {
+  float: right;
+  margin-left: 34px;
+}
+
+.liner {
+  width: 2em;
+  height: 100%;
+  overflow: hidden;
+}
+
+#console {
+  width: 100%;
+  height: 20vh;
+  background-color: #1D2433;
+  overflow: hidden;
+  position: fixed;
+  bottom:0;
+
+}
+
+.console-menu {
+  height: 25px;
+  background-color: #414855;
+  border-top: 1px solid #8b8b8b;
+  border-bottom: 1px solid #8b8b8b;
+  margin-bottom: 20px;
+  display: flex;
+
+}
+.arrow{
+  display:flex
+}
+
+#up-arrow  {
+  width: 0;
+  height: 0;
+  border-left: 1.5em solid transparent;
+  border-right: 1.5em solid transparent;
+  border-bottom: 1.5em solid #8b8b8b;
+}
+
+#down-arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #8b8b8b;
+}
+#console-tab {
+  display: inline-block;
+  padding-right: 5px;
+  border-right: 1px solid #8b8b8b;
+  border-left: 1px solid #8b8b8b;
+}
+#line{
+  width: 25px;
+  height: 5px;
+  margin-top: 10px;
+  background-color: #8b8b8b;
+}
+
+
+@media (max-width: 767px) {
+  .columns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .one.column{
+    width: auto !important;
+  }
+  #toggler {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/images/toggler.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-left: 0;
+    margin-top: 0;
+    width: 12em;
+
+
+  }
+
+  .profile-pic {
+    /*height: 100px!important;*/
+    /*width: 100px!important;*/
+    /*background-size: 60px!important;*/
+    /*margin-bottom: 40px;*/
+    /*margin-left: 0;*/
+    margin: 1px !important;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: block !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .editor-menu {
+    display: none;
+  }
+
+  .profile-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-size: 95px;
+    /*margin-bottom: 40px;*/
+    /*margin-left: 0;*/
+    margin: 10px;
+  }
+
+  .one.column {
+    width: 4.66666666667%;
+  }
+
+  .eleven.columns {
+    width: 91.3333333333%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+}
+
