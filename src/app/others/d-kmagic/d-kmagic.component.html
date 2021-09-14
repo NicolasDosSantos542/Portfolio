@@ -1,4 +1,5 @@
-<tr>
+
+<table><tr>
   <th>PM</th>
   <th>0</th>
   <th>1</th>
@@ -6,7 +7,8 @@
   <th>3</th>
   <th>4</th>
 </tr>
-<tr *ngFor="let row of effects">
+<tr *ngFor="let row of effects" class="{{row.class}}">
   <th>{{row.name}}</th>
-  <td *ngFor="let value of row.values" data="{{value.pm}}">{{value.name}}</td>
+  <td *ngFor="let value of row.values"  (click)="handleClick(value.pm)" data-target="{{value.pm}}">{{value.name}}</td>
 </tr>
+</table>

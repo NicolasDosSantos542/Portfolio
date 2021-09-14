@@ -9,6 +9,7 @@ export class DKmagicComponent implements OnInit {
   effects = [
     {
       name: ' portée',
+      class : 'impair',
       values:
         [
           {pm: 0, name: 'mêlée'},
@@ -20,6 +21,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: ' durée',
+      class : 'pair',
       values:
         [
           {pm: 0, name: 'instantanné ou 1 tour'},
@@ -31,6 +33,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Cibles ou zone',
+      class : 'impair',
       values:
         [
           {pm: 0, name: '1 ou chaise'},
@@ -42,6 +45,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Délai',
+      class : 'pair',
       values:
         [
           {pm: 0, name: 'tout de suite'},
@@ -53,6 +57,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Effets génériques',
+      class : 'impair',
       values:
         [
           {pm: 0, name: 'amateurs'},
@@ -64,6 +69,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Dégâts & Soins',
+      class : 'pair',
       values:
         [
           {pm: 0, name: '1d6 + caractéristique'},
@@ -75,6 +81,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Coups spéciaux',
+      class : 'impair',
       values:
         [
           {pm: 0, name: ''},
@@ -86,6 +93,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Modificateur compétence',
+      class : 'pair',
       values:
         [
           {pm: 0, name: '+1/-1	'},
@@ -97,6 +105,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'FD invocation de combat',
+      class : 'impair',
       values:
         [
           {pm: 0, name: '-'},
@@ -108,6 +117,7 @@ export class DKmagicComponent implements OnInit {
     },
     {
       name: 'Niveau d\'invocation',
+      class : 'pair',
       values:
         [
           {pm: 0, name: '1'},
@@ -125,5 +135,9 @@ export class DKmagicComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  handleClick(pm: any) {
+    console.log('pm en question:', pm);
+  }
 }
 
