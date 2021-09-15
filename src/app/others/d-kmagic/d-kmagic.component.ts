@@ -84,11 +84,11 @@ export class DKmagicComponent implements OnInit {
       class: 'impair',
       values:
         [
-          {pm: 0, name: ''},
+          {pm: 0, name: '-'},
           {pm: 1, name: '1 coup'},
-          {pm: 2, name: ''},
+          {pm: 2, name: '-'},
           {pm: 3, name: '2 coups'},
-          {pm: 4, name: ''},
+          {pm: 4, name: '-'},
         ]
     },
     {
