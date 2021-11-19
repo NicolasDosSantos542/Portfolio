@@ -135,6 +135,10 @@ export class DKmagicComponent implements OnInit {
   level = 1;
   known = 0;
   isChecked: any;
+  one: boolean;
+  two: boolean;
+  three: boolean;
+  for: boolean;
 
   constructor() {
   }
@@ -173,7 +177,7 @@ export class DKmagicComponent implements OnInit {
   // tslint:disable-next-line:typedef
   handleClick(event) {
     this.base = event.target.value;
-    console.log('coucou' , this.base);
+    console.log('coucou', this.base);
     console.log('pm = ', this.pm);
     this.calculateFd();
   }
