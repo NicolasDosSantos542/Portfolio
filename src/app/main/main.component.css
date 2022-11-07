@@ -1,4 +1,3 @@
-
 .ide {
   background-color: #171C28;
   overflow: auto;
@@ -13,8 +12,12 @@
   margin-left: 25%;
   list-style: none;
   background-color: #171C28;
-  color: #D6BE5C ;
+  color: #D6BE5C;
 
+}
+
+.navLink {
+  cursor: pointer;
 }
 
 .profile-pic {
@@ -83,7 +86,7 @@
   background-color: #1D2433;
   overflow: hidden;
   position: fixed;
-  bottom:0;
+  bottom: 0;
 
 }
 
@@ -96,11 +99,12 @@
   display: flex;
 
 }
-.arrow{
-  display:flex
+
+.arrow {
+  display: flex
 }
 
-#up-arrow  {
+#up-arrow {
   width: 0;
   height: 0;
   border-left: 1.5em solid transparent;
@@ -115,13 +119,15 @@
   border-right: 20px solid transparent;
   border-top: 20px solid #8b8b8b;
 }
+
 #console-tab {
   display: inline-block;
   padding-right: 5px;
   border-right: 1px solid #8b8b8b;
   border-left: 1px solid #8b8b8b;
 }
-#line{
+
+#line {
   width: 25px;
   height: 5px;
   margin-top: 10px;
@@ -135,9 +141,11 @@
     display: flex;
     justify-content: space-around;
   }
-  .one.column{
+
+  .one.column {
     width: auto !important;
   }
+
   #toggler {
     height: 100px;
     width: 100px;
@@ -196,10 +204,8 @@
   .eleven.columns {
     width: 91.3333333333%;
   }
-  
+
 
 }
 
-@media (min-width: 1200px) {
-}
-
+@media (min-width: 1200px) {}
