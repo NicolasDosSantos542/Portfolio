@@ -78,6 +78,7 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
         this.displayComponents();
         break;
       case 'getCV':
+      case 'getcv':
         this.getCV();
         break;
       case 'cd':

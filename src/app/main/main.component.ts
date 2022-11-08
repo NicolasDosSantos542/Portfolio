@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   title = 'portfolio';
+  lastPage = '';
+  currentPage = 'home';
   link = {
     isHomeActive: true,
     isBackgroundActive: false,
@@ -30,6 +32,10 @@ export class MainComponent implements OnInit {
     Object.keys(this.link).forEach(val => {
       this.link[val] = false;
     });
+    this.lastPage = this.currentPage
+    this.currentPage = element;
+
+    console.log({ "current": this.currentPage, "last": this.lastPage })
     switch (element) {
       case 'home':
         this.link.isHomeActive = true;
@@ -68,29 +74,61 @@ export class MainComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   closeTab(element) {
+    if (element === this.lastPage) {
+      let toto = this.findLastTab()
+      console.log("toto",toto)
+      this.lastPage = 'home'
+    }
     switch (element) {
       case 'home':
         this.link.isHomeActive = false;
         this.tab.isHomeActive = false;
+        if (element === this.currentPage) {
+          this.chooseDisplayed(this.lastPage)
+        }
         break;
 
       case 'background':
         this.link.isBackgroundActive = false;
         this.tab.isBackgroundActive = false;
+        if (element === this.currentPage) {
+          this.chooseDisplayed(this.lastPage)
+        }
         break;
       case 'skills':
         this.link.isSkillActive = false;
         this.tab.isSkillActive = false;
+        if (element === this.currentPage) {
+          this.chooseDisplayed(this.lastPage)
+        }
         break;
       case 'projects':
         this.link.isProjectsActive = false;
         this.tab.isProjectsActive = false;
+        if (element === this.currentPage) {
+          this.chooseDisplayed(this.lastPage)
+        }
         break;
       case 'contact':
         this.link.isContactActive = false;
         this.tab.isContactActive = false;
+        if (element === this.currentPage) {
+          this.chooseDisplayed(this.lastPage)
+        }
         break;
     }
+  }
+
+  findLastTab(){
+
+    let list=[];
+    Array.from(document.getElementsByClassName("editor-tab")).forEach(
+      function(element, index, array) {
+          list.push(element.id)
+      }
+    );
+      return list
+
   }
 
   // tslint:disable-next-line:typedef
