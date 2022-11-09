@@ -26,7 +26,7 @@ export class User {
 @Injectable() // pour l'injecter sans faire un appel explecite
               // (Exemple passer comme parametre d'un constructeur)
 export class UserService {
-   getPofiles(): Profile[] {
+   getProfiles(): Profile[] {
       let profiles = [
 		 new Profile('dev', 'Developpeur'),
 		 new Profile('man', 'Manager'),

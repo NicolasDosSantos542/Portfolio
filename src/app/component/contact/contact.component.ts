@@ -37,6 +37,5 @@ export class ContactComponent implements OnInit {
     (await this.messageService.sendForm(request)).subscribe(() => {
       alert('message envoyé');
     });
-    console.log(this.formData);
   }
 }

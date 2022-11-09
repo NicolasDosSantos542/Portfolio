@@ -54,18 +54,14 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
     let cmd = value;
     let param;
     if (value.includes(' ')) {
-      console.log('enter in IF');
       cmd = value.substr(0, value.indexOf(' '));
-      console.log(cmd);
       let secondPart = value.substr(value.indexOf(' '), value.length);
-      console.log(secondPart);
       secondPart = secondPart.trim();
       if (secondPart.includes(' ')) {
         param = secondPart.substr(0, secondPart.indexOf(' '));
       }else {
         param = secondPart.substr(0, secondPart.length);
       }
-      console.log('param', param);
     }
     terminal.innerHTML += 'nicolas-dds>' + value + '<br/>';
 
@@ -149,7 +145,6 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
     this.goToPage.emit(element);
   }
   putFocusOnTerminal(){
-    console.log("focus on terminal")
     document.getElementById("cmdInput").focus();
   }
 }

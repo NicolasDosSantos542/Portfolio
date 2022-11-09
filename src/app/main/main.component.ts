@@ -31,17 +31,12 @@ export class MainComponent implements OnInit {
   resize_el;
   m_pos 
   
-  ngOnChange(){
-    console.log("toto")
-  }
 
   ngAfterViewInit() {
     this.resize_el = document.getElementById("resize");
 
-    console.log(this.resize_el)
     let that = this
     this.resize_el.addEventListener("mousedown", function (e) {
-      console.log(e.y)
       that.m_pos = e.x;
       document.addEventListener("mousemove", that.resize, false);
     }, false);
@@ -58,7 +53,6 @@ export class MainComponent implements OnInit {
     this.lastPage = this.currentPage
     this.currentPage = element;
 
-    console.log({ "current": this.currentPage, "last": this.lastPage })
     switch (element) {
       case 'home':
         this.link.isHomeActive = true;
@@ -98,8 +92,6 @@ export class MainComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closeTab(element) {
     if (element === this.lastPage) {
-      let toto = this.findLastTab()
-      console.log("toto", toto)
       this.lastPage = 'home'
     }
     switch (element) {
@@ -159,9 +151,11 @@ export class MainComponent implements OnInit {
   }
   resize(e) {
     var parent = document.getElementById("console")
-    var dy = this.m_pos - e.y;
-    this.m_pos = e.y;
-    parent.style.height = (parseInt(getComputedStyle(parent, '').height) + dy) + "px";
+    if(e.clientY >10){
+      var dy = this.m_pos - e.y;
+      this.m_pos = e.y;
+      parent.style.height = (parseInt(getComputedStyle(parent, '').height) + dy) + "px";
+    }
   }
 
 }

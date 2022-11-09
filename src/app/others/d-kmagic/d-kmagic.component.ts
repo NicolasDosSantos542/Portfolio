@@ -150,7 +150,6 @@ export class DKmagicComponent implements OnInit {
   toggleClass(event: any, className: string, pm: number) {
     const hasClass = event.target.classList.contains(className);
     if (event.target.innerText !== '-') {
-      console.log(pm);
       if (hasClass) {
         event.target.classList.remove(className);
         this.pm -= pm;
@@ -171,14 +170,11 @@ export class DKmagicComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   checkValue(event: any) {
-    console.log(event);
   }
 
   // tslint:disable-next-line:typedef
   handleClick(event) {
     this.base = event.target.value;
-    console.log('coucou', this.base);
-    console.log('pm = ', this.pm);
     this.calculateFd();
   }
 }
