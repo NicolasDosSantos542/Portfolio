@@ -27,6 +27,29 @@ export class MainComponent implements OnInit {
   toggler = false;
   consoleHeight = 20;
 
+
+  resize_el;
+  m_pos 
+  
+  ngOnChange(){
+    console.log("toto")
+  }
+
+  ngAfterViewInit() {
+    this.resize_el = document.getElementById("resize");
+
+    console.log(this.resize_el)
+    let that = this
+    this.resize_el.addEventListener("mousedown", function (e) {
+      console.log(e.y)
+      that.m_pos = e.x;
+      document.addEventListener("mousemove", that.resize, false);
+    }, false);
+    document.addEventListener("mouseup", function () {
+      document.removeEventListener("mousemove", that.resize, false);
+    }, false);
+  }
+
   // tslint:disable-next-line:typedef
   chooseDisplayed(element) {
     Object.keys(this.link).forEach(val => {
@@ -76,7 +99,7 @@ export class MainComponent implements OnInit {
   closeTab(element) {
     if (element === this.lastPage) {
       let toto = this.findLastTab()
-      console.log("toto",toto)
+      console.log("toto", toto)
       this.lastPage = 'home'
     }
     switch (element) {
@@ -119,35 +142,26 @@ export class MainComponent implements OnInit {
     }
   }
 
-  findLastTab(){
+  findLastTab() {
 
-    let list=[];
+    let list = [];
     Array.from(document.getElementsByClassName("editor-tab")).forEach(
-      function(element, index, array) {
-          list.push(element.id)
+      function (element, index, array) {
+        list.push(element.id)
       }
     );
-      return list
+    return list
 
   }
 
-  // tslint:disable-next-line:typedef
-  moveConsole($event) {
-    if ($event.target.id === 'up-arrow' && this.consoleHeight !== 100) {
-      this.consoleHeight += 20;
-    }
-    if ($event.target.id === 'down-arrow' && this.consoleHeight !== 20) {
-      this.consoleHeight -= 20;
-    } else if ($event.target.id === 'down-arrow' && this.consoleHeight === 20) {
-      this.consoleHeight = 5;
-    }
-    if ($event.target.id === 'line') {
-      this.consoleHeight = 5;
-    }
-    document.getElementById('console').style.height = this.consoleHeight + 'vh';
-    document.getElementById('terminal').style.height = this.consoleHeight - 3 + 'vh';
-  }
 
   ngOnInit(): void {
   }
+  resize(e) {
+    var parent = document.getElementById("console")
+    var dy = this.m_pos - e.y;
+    this.m_pos = e.y;
+    parent.style.height = (parseInt(getComputedStyle(parent, '').height) + dy) + "px";
+  }
+
 }

@@ -148,4 +148,8 @@ export class ConsoleComponent implements OnInit, AfterViewChecked {
     }
     this.goToPage.emit(element);
   }
+  putFocusOnTerminal(){
+    console.log("focus on terminal")
+    document.getElementById("cmdInput").focus();
+  }
 }
