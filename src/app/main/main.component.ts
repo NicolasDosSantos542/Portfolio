@@ -52,6 +52,7 @@ export class MainComponent implements OnInit {
     });
     this.lastPage = this.currentPage
     this.currentPage = element;
+    console.log({"tab" : this.tab, "link": this.link})
 
     switch (element) {
       case 'home':

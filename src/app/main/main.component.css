@@ -65,8 +65,8 @@
   background-color: #171C28;
 }
 
-.editor-tab:active {
-  background-color: #414855;
+.editor-tab-active {
+  background-color: #171C28;
 }
 
 .close-button {
