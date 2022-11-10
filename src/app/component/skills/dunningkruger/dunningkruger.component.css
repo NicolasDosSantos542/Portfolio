@@ -1,0 +1,14 @@
+#dunningkruger {
+    max-width: 500px;
+}
+
+.d-k-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right,
+.left{
+font-size: 80%;
+margin : 2%;
+}
