@@ -18,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { DKmagicComponent } from './others/d-kmagic/d-kmagic.component';
 import { MainComponent } from './main/main.component';
 import { DunningkrugerComponent } from './component/skills/dunningkruger/dunningkruger.component';
+import { DkImageComponent } from './component/skills/dunningkruger/dk-image/dk-image.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DunningkrugerComponent } from './component/skills/dunningkruger/dunning
     FullScreenViewComponent,
     DKmagicComponent,
     MainComponent,
-    DunningkrugerComponent
+    DunningkrugerComponent,
+    DkImageComponent
   ],
   imports: [
     BrowserModule,

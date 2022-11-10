@@ -1,6 +1,11 @@
 <div class="d-k-content">
     <div class="left">
-        <img src="/assets/images/dunning_kruger.png" alt="courbe apprentissage/confiance" id="dunningkruger">
+        <img src="/assets/images/dunning_kruger.png" (click)="setImageActive()" alt="courbe apprentissage/confiance"
+            id="dunningkruger">
+
+        <div *ngIf="this.isImageActive" (click)="setImageActive()">
+            <app-dk-image></app-dk-image>
+        </div>
     </div>
     <div class="right">
         <p>La courbe Dunning-Kruger est une courbe représentant la confiance en soi d'une personne concernant une
