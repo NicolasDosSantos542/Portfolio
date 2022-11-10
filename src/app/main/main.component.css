@@ -1,6 +1,6 @@
 .ide {
   background-color: #171C28;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .toggler {
@@ -44,6 +44,14 @@
   background-color: #1D2433;
   border-bottom: 1px solid #8b8b8b;
   margin-bottom: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-content {
+  padding-top: 3rem;
 }
 
 .editor-tab {
@@ -108,8 +116,8 @@
   border-left: 1px solid #8b8b8b;
 }
 
-.console{
-  height:100%
+.console {
+  height: 100%
 }
 
 @media (max-width: 767px) {
@@ -189,8 +197,8 @@
 
 #resize {
   cursor: n-resize;
-  position:fixed;
-  width:100%;
+  position: fixed;
+  width: 100%;
 }
 
 @media (min-width: 1200px) {}
