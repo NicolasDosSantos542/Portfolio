@@ -17,6 +17,7 @@ import { FullScreenViewComponent } from './component/projects/full-screen-view/f
 import {HttpClientModule} from '@angular/common/http';
 import { DKmagicComponent } from './others/d-kmagic/d-kmagic.component';
 import { MainComponent } from './main/main.component';
+import { DunningkrugerComponent } from './component/skills/dunningkruger/dunningkruger.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MainComponent } from './main/main.component';
     ConsoleComponent,
     FullScreenViewComponent,
     DKmagicComponent,
-    MainComponent
+    MainComponent,
+    DunningkrugerComponent
   ],
   imports: [
     BrowserModule,
