@@ -11,16 +11,16 @@ export class MainComponent implements OnInit {
   lastPage = '';
   currentPage = 'home';
   link = {
-    isHomeActive: false,
+    isHomeActive: true,
     isBackgroundActive: false,
-    isSkillActive: true,
+    isSkillActive: false,
     isProjectsActive: false,
     isContactActive: false
   };
   tab = {
-    isHomeActive: false,
+    isHomeActive: true,
     isBackgroundActive: false,
-    isSkillActive: true,
+    isSkillActive: false,
     isProjectsActive: false,
     isContactActive: false
   };
